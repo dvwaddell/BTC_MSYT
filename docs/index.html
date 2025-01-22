@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Re-Introduction to Batch Tipsy Composer</title>
+  <meta name="description" content="<p>This is the bookdown for Intro to BTC
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="generator" content="bookdown 0.41 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Re-Introduction to Batch Tipsy Composer" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is the bookdown for Intro to BTC
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Re-Introduction to Batch Tipsy Composer" />
+  
+  <meta name="twitter:description" content="<p>This is the bookdown for Intro to BTC
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  
+
+<meta name="author" content="Dave Waddell, RPF, MF" />
+
+
+<meta name="date" content="2025-01-22" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">FAIB MSYT: BTC Training</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="#introduction"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="index.html"><a href="#btc-software-install-sample-data"><i class="fa fa-check"></i><b>2</b> BTC: Software Install &amp; Sample Data</a></li>
+<li class="chapter" data-level="3" data-path="index.html"><a href="#btc-input-data"><i class="fa fa-check"></i><b>3</b> BTC Input Data</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="index.html"><a href="#input-tab"><i class="fa fa-check"></i><b>3.1</b> Input TAB</a></li>
+<li class="chapter" data-level="3.2" data-path="index.html"><a href="#select-report-type"><i class="fa fa-check"></i><b>3.2</b> Select Report Type</a></li>
+<li class="chapter" data-level="3.3" data-path="index.html"><a href="#select-output-file-names"><i class="fa fa-check"></i><b>3.3</b> Select Output File Names</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="index.html"><a href="#btc-input-data-format"><i class="fa fa-check"></i><b>4</b> BTC Input Data Format</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="index.html"><a href="#identifier-section"><i class="fa fa-check"></i><b>4.1</b> Identifier Section</a></li>
+<li class="chapter" data-level="4.2" data-path="index.html"><a href="#planted-composition"><i class="fa fa-check"></i><b>4.2</b> Planted Composition</a></li>
+<li class="chapter" data-level="4.3" data-path="index.html"><a href="#natural-composition"><i class="fa fa-check"></i><b>4.3</b> Natural Composition</a></li>
+<li class="chapter" data-level="4.4" data-path="index.html"><a href="#other-attribution"><i class="fa fa-check"></i><b>4.4</b> Other attribution</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="index.html"><a href="#btc-output"><i class="fa fa-check"></i><b>5</b> BTC output</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="index.html"><a href="#output-screen"><i class="fa fa-check"></i><b>5.1</b> Output Screen</a></li>
+<li class="chapter" data-level="5.2" data-path="index.html"><a href="#output-format"><i class="fa fa-check"></i><b>5.2</b> Output Format</a></li>
+<li class="chapter" data-level="5.3" data-path="index.html"><a href="#height"><i class="fa fa-check"></i><b>5.3</b> Height</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="index.html"><a href="#btc-errors-warnings"><i class="fa fa-check"></i><b>6</b> BTC Errors &amp; warnings</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="index.html"><a href="#specific-errors-and-warning"><i class="fa fa-check"></i><b>6.1</b> Specific Errors and Warning</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="index.html"><a href="#log-files"><i class="fa fa-check"></i><b>7</b> LOG Files</a></li>
+<li class="chapter" data-level="8" data-path="index.html"><a href="#model-tab"><i class="fa fa-check"></i><b>8</b> Model TAB</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="index.html"><a href="#utilization"><i class="fa fa-check"></i><b>8.1</b> Utilization</a></li>
+<li class="chapter" data-level="8.2" data-path="index.html"><a href="#oafs"><i class="fa fa-check"></i><b>8.2</b> OAFs</a></li>
+<li class="chapter" data-level="8.3" data-path="index.html"><a href="#genetic-worth"><i class="fa fa-check"></i><b>8.3</b> Genetic Worth</a></li>
+<li class="chapter" data-level="8.4" data-path="index.html"><a href="#table-specifications"><i class="fa fa-check"></i><b>8.4</b> Table Specifications</a></li>
+<li class="chapter" data-level="8.5" data-path="index.html"><a href="#reports-graphs"><i class="fa fa-check"></i><b>8.5</b> Reports / Graphs</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="index.html"><a href="#btc-in-true-batch-mode"><i class="fa fa-check"></i><b>9</b> BTC in true BATCH mode</a></li>
+<li class="chapter" data-level="10" data-path="index.html"><a href="#errors-and-warnings"><i class="fa fa-check"></i><b>10</b> ERRORS and WARNINGS</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="index.html"><a href="#caution"><i class="fa fa-check"></i><b>10.1</b> Caution</a></li>
+<li class="chapter" data-level="10.2" data-path="index.html"><a href="#help"><i class="fa fa-check"></i><b>10.2</b> Help</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="index.html"><a href="#questions"><i class="fa fa-check"></i><b>11</b> Questions?</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Re-Introduction to Batch Tipsy Composer</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Re-Introduction to Batch Tipsy Composer</h1>
+<p class="author"><em>Dave Waddell, RPF, MF</em></p>
+<p class="date"><em>2025-01-22</em></p>
+</div>
+<div id="introduction" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Section - 1</span> Introduction<a href="#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Batch Tipsy Composer (BTC) has been around since the first production runs of the MSYTs for TSR. It initially provided an efficient CSV interface that got around the strict and old school format specification for the batch version of Tipsy.</p>
+<p>While many of you are probably familiar with the Tipsy Interface, BTC has a much different interface.</p>
+<p><img src="images/BTC_start.PNG" /></p>
+<p>Please note that this is version 1.4.2, Dec 9, 2024.</p>
+</div>
+<div id="btc-software-install-sample-data" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Section - 2</span> BTC: Software Install &amp; Sample Data<a href="#btc-software-install-sample-data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>BTC is available here:</p>
+<p><img src="images/coming_soon.jpg" /></p>
+<p><a href="https://www2.gov.bc.ca/gov/content/industry/forestry/managing-our-forest-resources/forest-inventory/growth-and-yield-modelling/" class="uri">https://www2.gov.bc.ca/gov/content/industry/forestry/managing-our-forest-resources/forest-inventory/growth-and-yield-modelling/</a></p>
+<p>Clarify that this is the BTC stand alone installer.</p>
+<p>Copy to your local drive c:/data/localApps</p>
+<ul>
+<li>BTC1.4-20241209.msi [get name]</li>
+</ul>
+<p>Install to location:</p>
+<p>C:/data/localApps/BTC/BTC_1.4</p>
+<p>Also grab the sample data file from [to be defined]</p>
+<ul>
+<li>MSYT_sample.csv</li>
+</ul>
+</div>
+<div id="btc-input-data" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Section - 3</span> BTC Input Data<a href="#btc-input-data" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="input-tab" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Input TAB<a href="#input-tab" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The Input tab is used to select Input format for creating yield tables</p>
+<p>Clicking on the Input TAB allows you to select the input file type and select the input file:</p>
+<p><img src="images/BTC_tsr_input.jpg" /></p>
+<ul>
+<li>Tick the radiobutton: TSR MSYT input format (.csv)</li>
+<li>Click the Select Files(s) button</li>
+</ul>
+<p>Note that clicking on TSR button will take you directly to: Select TSR MSYT input format files to import”</p>
+</div>
+<div id="select-report-type" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Select Report Type<a href="#select-report-type" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="images/BTC_start_processing.PNG" /></p>
+<p>Note that the report type defaults to TSR Volume by Age.</p>
+<p>Other types of reports are listed but the main selections are:</p>
+<ul>
+<li>TSR Volume by Age
+<ul>
+<li>volume, height</li>
+</ul></li>
+<li>FLP Volume by Age
+<ul>
+<li>gross volume, crown_closure</li>
+</ul></li>
+</ul>
+<p>Selecting the TSR report type sets defaults for Utilization and OAFs (see below).</p>
+</div>
+<div id="select-output-file-names" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Select Output File Names<a href="#select-output-file-names" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Output file names can be modified as required, but for TSR:</p>
+<p>Input: MSYT_sample_input.csv<br />
+Output: MSYT_sample_input_output.csv<br />
+Error: MSYT_sample_input_error.csv</p>
+</div>
+</div>
+<div id="btc-input-data-format" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Section - 4</span> BTC Input Data Format<a href="#btc-input-data-format" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Once you have selected your input file the first few rows of data will appear.</p>
+<p>It is important to note that there are 4 main sections to each input row:</p>
+<div id="identifier-section" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Identifier Section<a href="#identifier-section" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="images/BTC_input1.PNG" /></p>
+<p>The first section supplies the row identifier (in this case feature_id), as well as the BEC zone and subzone.<br />
+Note that BTC has a know list of BEC and if supplied with something unknown an ERROR will occur.</p>
+<p>The first column in the CSV is always the name of the identifier. Accepted values:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Identifier</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">feature_id</td>
+</tr>
+<tr class="even">
+<td align="left">opening_id</td>
+</tr>
+<tr class="odd">
+<td align="left">id</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="planted-composition" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Planted Composition<a href="#planted-composition" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="images/BTC_input2.PNG" /></p>
+<p>The second section represents the planted component of the stand and shows:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Planted Component</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Planted Species (1-5)</td>
+</tr>
+<tr class="even">
+<td align="left">Planted Species Density (1-5)</td>
+</tr>
+<tr class="odd">
+<td align="left">Genetic Worth by species (1-5)</td>
+</tr>
+<tr class="even">
+<td align="left">Planting Delay</td>
+</tr>
+<tr class="odd">
+<td align="left">Percent Planted (0-100)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="natural-composition" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Natural Composition<a href="#natural-composition" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="images/BTC_input3.PNG" /></p>
+<p>The third section represents the natural component of the stands and shows:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Natural Component</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Natural Species (1-5)</td>
+</tr>
+<tr class="even">
+<td align="left">Natural Species Density (1-5)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="other-attribution" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> Other attribution<a href="#other-attribution" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="images/BTC_input4.PNG" /></p>
+<p>The fourth section shows:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Attribute</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">OAF1</td>
+<td align="left">Standard OAF 1 15%</td>
+</tr>
+<tr class="even">
+<td align="left">OAF2</td>
+<td align="left">Standard Oaf 2 5%</td>
+</tr>
+<tr class="odd">
+<td align="left">Opening_id</td>
+<td align="left">optional</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">vri reference age</td>
+<td align="left">backgrow attribution</td>
+</tr>
+<tr class="even">
+<td align="left">vri ref density</td>
+<td align="left">backgrow attribution</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Site Index values</td>
+<td align="left">for all 22 PSPL species</td>
+</tr>
+</tbody>
+</table>
+<div id="backgrow-attribution" class="section level3 hasAnchor" number="4.4.1">
+<h3><span class="header-section-number">4.4.1</span> Backgrow attribution<a href="#backgrow-attribution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The BTC backgrow function is used for stands harvested prior to 1987 only.</p>
+<ul>
+<li>vri reference age</li>
+<li>vri ref density</li>
+</ul>
+<p>The reference age is the age at which the density is derived.</p>
+<p>These attributes control the backgrow function to take a stand at some age and backgrow to derive initial starting conditions for a MSYT.</p>
+</div>
+<div id="site-index-by-species" class="section level3 hasAnchor" number="4.4.2">
+<h3><span class="header-section-number">4.4.2</span> Site Index by Species<a href="#site-index-by-species" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Site index values for 22 species are derived from the PSPL data.</p>
+</div>
+</div>
+</div>
+<div id="btc-output" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">Section - 5</span> BTC output<a href="#btc-output" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Once you have selected the input file and the file type, click Start Processing</p>
+<p><img src="images/start_processing.jpg" /></p>
+<div id="output-screen" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Output Screen<a href="#output-screen" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="images/BTC_proc_issues.PNG" /></p>
+<p>Note at the bottom that it lists:</p>
+<ul>
+<li>file names</li>
+<li>Warnings and Errors.</li>
+</ul>
+<p>In this case there were none.</p>
+</div>
+<div id="output-format" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Output Format<a href="#output-format" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Output is single row per identifier, with:</p>
+<ul>
+<li>merch conifer volume (MVcon_) at age 0-120</li>
+<li>merch deciduous volume (MVdec_) at age 0-120</li>
+<li>conifer height (HTcon_) at age 0-120</li>
+<li>deciduous height (HTdec_) at age 0-120</li>
+</ul>
+</div>
+<div id="height" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Height<a href="#height" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Height output is the average height.</p>
+<p>Beware of the Dr and At mortality OAFs. They can set the deciduous height to zero with unintended consequences.</p>
+</div>
+</div>
+<div id="btc-errors-warnings" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Section - 6</span> BTC Errors &amp; warnings<a href="#btc-errors-warnings" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>If you are running BTC with custom data, you may encounter either a ERROR or WARNING messages.<br />
+The count will appear in the processing window.</p>
+<p><img src="images/BTC_error1.PNG" /></p>
+<p>There are warnings for:</p>
+<ul>
+<li>site index too high</li>
+<li>site index too low</li>
+<li>exceeding maximum density for a species</li>
+<li>going below the minimum density for a species</li>
+</ul>
+<p>In theory, for the Provincial release, there should be no errors and the warnings have been examined and accounted for.</p>
+<p>High site, the site index gets capped at the max allowed.<br />
+Reduced stems, means we’re using the max stems available in the database</p>
+<p>Low site if you get a warning, the species won’t be contributing any volume.</p>
+<div id="specific-errors-and-warning" class="section level2 hasAnchor" number="6.1">
+<h2><span class="header-section-number">6.1</span> Specific Errors and Warning<a href="#specific-errors-and-warning" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="natural-component-in-a-100-planted-stand" class="section level3 hasAnchor" number="6.1.1">
+<h3><span class="header-section-number">6.1.1</span> Natural component in a 100% Planted Stand:<a href="#natural-component-in-a-100-planted-stand" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Context</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Warning</td>
+<td align="left">Ignoring TU Species information has been entered for the ‘Natural’ treatment unit which does not occupy any area!</td>
+</tr>
+</tbody>
+</table>
+<p>BTC will only ignore the Natural component of a stand when the planted percent is 100%.<br />
+When planted percent is less than 100% the natural component is included in the volume generation.</p>
+</div>
+<div id="site-index-of-0-or-null-for-a-required-species" class="section level3 hasAnchor" number="6.1.2">
+<h3><span class="header-section-number">6.1.2</span> Site index of 0 or NULL for a required species<a href="#site-index-of-0-or-null-for-a-required-species" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Context</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Error</td>
+<td align="left">Site index out of range The site index for species ‘Pl’ is set to ‘0’, it must be a value between 5 and 60.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="log-files" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">Section - 7</span> LOG Files<a href="#log-files" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>LOG files are written to the same location as the input files.<br />
+They are given a date stamped name and can be read with any standard text editor.</p>
+<p>LOG files contain:</p>
+<p>Version Information:</p>
+<p>Program: BatchTIPSY Composer (64 bit)<br />
+Version: 1.4.2.0<br />
+VerDate: Dec 9, 2024<br />
+SIndex: 1.54<br />
+Started: Jan 8, 2025 13:15:13<br />
+Database: Ministry Standard Database, March 2023</p>
+<p>Report Type:</p>
+<p>Report: TSR Volume by Age<br />
+MVcon {yr} Volume (Conifer / Automatic utilization)<br />
+MVdec {yr} Volume (Deciduous / Automatic utilization)<br />
+HTcon {yr} Height (Conifer / Automatic utilization)<br />
+HTdec {yr} Height (Deciduous / Automatic utilization)</p>
+<p>Utilization settings: (Note that these are the defaults for TSR Report type)</p>
+<p>Utilization Group: Coast 12.5 / Interior 17.5 except PLI 12.5<br />
+coast conifer+deciduous 12.5<br />
+interior conifer+deciduous 17.5<br />
+interior PL 12.5<br />
+interior PLI 12.5</p>
+<p>Oaf settings:</p>
+<p>OAFs:<br />
+OAF1 Default 0.85 / Reading ‘OAF1’ &lt;&lt;&lt; read from input file<br />
+OAF2 Default 0.95 / Reading ‘OAF2’ &lt;&lt;&lt; read from input file<br />
+DR ‘Volume Curve’ = DR (see below)<br />
+AT ‘Volume Curve’ = AT (see below)<br />
+ArmV Default Off<br />
+ArmM Default Off<br />
+DSG Default Off<br />
+DSC Default Off</p>
+</div>
+<div id="model-tab" class="section level1 hasAnchor" number="8">
+<h1><span class="header-section-number">Section - 8</span> Model TAB<a href="#model-tab" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>If you want to check on other features, click on the Model TAB:</p>
+<div id="utilization" class="section level2 hasAnchor" number="8.1">
+<h2><span class="header-section-number">8.1</span> Utilization<a href="#utilization" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The default should be set to TSR utilization specifications.</p>
+<p><img src="images/BTC_utilization.PNG" /></p>
+<p>The default should be: Coast 12.5 / Interior 17.5 except PLI 12.5</p>
+<p>This can be interpreted as:</p>
+<ul>
+<li><p>Interior Pl: 12.5</p></li>
+<li><p>Interior Other Species: 17.5</p></li>
+<li><p>Coast: All species 12.5</p></li>
+<li><p>Deciduous Interior : 17.5</p></li>
+<li><p>Deciduous Coast: 12.5</p></li>
+</ul>
+</div>
+<div id="oafs" class="section level2 hasAnchor" number="8.2">
+<h2><span class="header-section-number">8.2</span> OAFs<a href="#oafs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>BTC has a variety of OAFs that are user selectable:</p>
+<p><img src="images/BTC_oafs.PNG" /></p>
+<p>In TSR, the following are the defaults:</p>
+<ul>
+<li>OAF1</li>
+<li>OAF2</li>
+<li>DR</li>
+<li>AT</li>
+</ul>
+<p>Note that in the TSR format, the specification of OAF 1 and 2 in the input data is required. Otherwise, OAFs are ignored.</p>
+<p>The other OAFs:</p>
+<ul>
+<li>AmV</li>
+<li>AmM</li>
+<li>DSG</li>
+<li>CSC</li>
+</ul>
+<p>require local information and are not normally used.</p>
+<p>We are using the OAFS provided for Alder (DR) and Aspen (AT). Note that in the volume output tables, you will observe the decline in deciduous volume.</p>
+<div id="dr-oaf" class="section level3 hasAnchor" number="8.2.1">
+<h3><span class="header-section-number">8.2.1</span> DR OAF<a href="#dr-oaf" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="images/BTC_dr_oaf.PNG" /></p>
+</div>
+<div id="at-oaf" class="section level3 hasAnchor" number="8.2.2">
+<h3><span class="header-section-number">8.2.2</span> AT OAF<a href="#at-oaf" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="images/BTC_at_oaf.PNG" /></p>
+</div>
+</div>
+<div id="genetic-worth" class="section level2 hasAnchor" number="8.3">
+<h2><span class="header-section-number">8.3</span> Genetic Worth<a href="#genetic-worth" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This is overwritten by the 5 genetic worth columns in the input table.</p>
+</div>
+<div id="table-specifications" class="section level2 hasAnchor" number="8.4">
+<h2><span class="header-section-number">8.4</span> Table Specifications<a href="#table-specifications" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>BTC tables are capped at age = 120. This was a group decision that included the Stand Development Modelling group, the YSM group and TSR folk.</p>
+<p>The default setting for BTC should be:</p>
+<p><img src="images/BTC_table_specs.PNG" /></p>
+<p>Stands are capped at 120 years and the age increment is 10.</p>
+<p>Note that if input is selected to be TSR MSYT input format, then this is automatically the setting.</p>
+</div>
+<div id="reports-graphs" class="section level2 hasAnchor" number="8.5">
+<h2><span class="header-section-number">8.5</span> Reports / Graphs<a href="#reports-graphs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><img src="images/BTC_reports.PNG" /></p>
+<p>This section details all the information that CAN be reported on.<br />
+For standardized TSR MSYTs, only volumes and heights are reported by age.</p>
+</div>
+</div>
+<div id="btc-in-true-batch-mode" class="section level1 hasAnchor" number="9">
+<h1><span class="header-section-number">Section - 9</span> BTC in true BATCH mode<a href="#btc-in-true-batch-mode" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>BTC can now be called using the command line interface (CLI).</p>
+<p>For an R session:</p>
+<pre><code># define where the executable is located
+exe_location &lt;- &#39;C:/data/localApps/BTC/BTC_1.4/BTC/TIPSYbtc.exe&#39;
+
+# define the input file
+input_file &lt;- paste0(base_dir,&#39;/MSYT_prov_current_input.csv&#39;)
+
+# define the output file
+output_file &lt;- paste0(base_dir,&#39;/MSYT_prov_current_input_output.csv&#39;)
+
+# define the error file
+error_file &lt;- paste0(base_dir,&#39;/MSYT_prov_current_input_error.csv&#39;)
+
+# define the argument list
+arguments &lt;- c(&#39;/TSR&#39;,input_file,output_file,error_file)
+
+# check that the input file exists
+if (file.exists(input_file)) {
+  # systems call
+  x &lt;- system2(exe_location,args=arguments)
+}
+</code></pre>
+<p>** Note:<br />
+system2 is used so that a list of separate arguments can be provided.<br />
+system takes the command a a single string.</p>
+<p>For a CLI (Command Line Interface aka CONSOLE)</p>
+<pre><code>C:&gt; C:/data/localApps/BTC/BTC_1.4/BTC/TIPSYbtc.exe /TSR  (input file)
+</code></pre>
+<p>If no output or error file is specified, the standard names are applied.</p>
+</div>
+<div id="errors-and-warnings" class="section level1 hasAnchor" number="10">
+<h1><span class="header-section-number">Section - 10</span> ERRORS and WARNINGS<a href="#errors-and-warnings" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="caution" class="section level2 hasAnchor" number="10.1">
+<h2><span class="header-section-number">10.1</span> Caution<a href="#caution" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This has been a very short introduction to the potential set of ERRORS and WARNINGS.</p>
+<p>The MSYT Process provided sets of BTC inputs and outputs are error free.</p>
+<p>If you choose to deviate from these, then you may encounter additional errors.</p>
+<p>In general, a quick look at the requested stand attribution will provide insight into the problem. However, if the problem persists, then the Stand Management Group should be contacted for advice.</p>
+</div>
+<div id="help" class="section level2 hasAnchor" number="10.2">
+<h2><span class="header-section-number">10.2</span> Help<a href="#help" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>For BTC and TIPSY support, please contact:</p>
+<p>Stand Development Modelling Team Lead<br />
+Catherine BealleStatland<br />
+<a href="mailto:Catherine.BealleStatland@gov.bc.ca" class="email">Catherine.BealleStatland@gov.bc.ca</a><br />
+778-974-5634</p>
+<p>Alternatively:</p>
+<p>Growth and Yield Applications Specialist
+Yanguo Qin<br />
+<a href="mailto:Yanguo.Qin@gov.bc.ca" class="email">Yanguo.Qin@gov.bc.ca</a></p>
+</div>
+</div>
+<div id="questions" class="section level1 hasAnchor" number="11">
+<h1><span class="header-section-number">Section - 11</span> Questions?<a href="#questions" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>This presentation is available here:</p>
+<p><a href="https://dvwaddell.github.io/BTC_MSYT/" class="uri">https://dvwaddell.github.io/BTC_MSYT/</a></p>
+<p>Author: Dave Waddell, RPF, MF<br />
+Contact: <a href="mailto:dvwaddell@gmail.com" class="email">dvwaddell@gmail.com</a></p>
+<p>Powered by:</p>
+<p><img src="./images/r_logo.jpg" title="R" /> <img src="./images/postgresql_logo.jpg" title="PostgreSQL (15.8)" /></p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subssection",
+"scroll_highligt": true
+}
+});
+});
+</script>
+
+</body>
+
+</html>

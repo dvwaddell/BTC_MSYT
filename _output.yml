@@ -1,0 +1,12 @@
+bookdown::gitbook:
+  toc_depth: 2
+  css: style.css
+  split_by: rmd
+  config:
+    toc:
+      collapse: subssection
+      scroll_highligt: yes
+      before: |
+        <li><a href="./">FAIB MSYT: BTC Training</a></li>
+      after: null
+
