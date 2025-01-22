@@ -7,7 +7,7 @@ Part of the documentation process for FAIB MSYT production.
 
 Utilizes Batch Tipsy Composer (BTC).  This is an introduction to the features in the BTC version 1.4.2.  
 
-Jan 1, 2025
+Jan 22, 2025
 
 
 
