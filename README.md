@@ -18,5 +18,5 @@ R consists of many 'packages' developed by R users that bundle-up specific funct
 
 ### GitHub Pages 
 
-https://dvwaddell.github.io/BTC_MSYT/
+https://dvwaddell.github.io/BTC_MSYT/docs/index.html
 
